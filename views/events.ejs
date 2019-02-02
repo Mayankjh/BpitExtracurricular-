@@ -1,0 +1,113 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h1 class="text-center mb-3">
+        <i class="fas fa-user-plus"></i> Register
+      </h1>
+      <% include ./partials/messages %>
+      <form action="/evregister" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="name"
+            id="name"
+            name="name"
+            class="form-control"
+            placeholder="Enter Name"
+           
+          />
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender:</label>
+          <select class="form-control" id="gender" name="gender">
+            <option>MALE</option>
+            <option>FEMALE</option>
+            <option>OTHER</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            placeholder="Enter Email"
+            
+          />
+        </div>
+        <div class="form-group">
+          <label for="program">Program:</label>
+          <select class="form-control" id="prog" name="prog">
+            <option>BTECH</option>
+            <option>MBA</option>
+            <option>BBA</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="course">Course:</label>
+          <select class="form-control" id="course" name="course">
+            <option>CSE</option>
+            <option>ECE</option>
+            <option>EEE</option>
+            <option>IT</option>
+            <option>NONE</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="section">Section:</label>
+          <select class="form-control" id="section" name="section">
+            <option>A</option>
+            <option>B</option>
+            <option>NONE</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="year">Year:</label>
+          <select class="form-control" id="year" name="year">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input
+            type="number"
+            id="phone"
+            name="phone"
+            class="form-control"
+            placeholder="Enter Contact No."/>
+        </div>
+        <div class="form-group">
+          <label for="game">Game Event:</label>
+          <select class="form-control" id="game" name="game">
+            <option>Cricket</option>
+            <option>Basketball</option>
+            <option>Badminton</option>
+            <option>Chess</option>
+            <option>Football</option>
+            <option>Athletics</option>
+            <option>Kabaddi</option>
+            <option>Volleyball</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="name">Experience (If Any)</label>
+          <input
+            type="text"
+            id="experience"
+            name="experience"
+            class="form-control"
+            placeholder="For students with no Experience type NA"
+           
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          Register
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

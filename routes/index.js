@@ -4,6 +4,8 @@ const { ensureAuthenticated } = require('../config/auth');
 
 // Welcome Page
 router.get('/', (req, res) => res.render('welcome'));
+// Welcome Page
+router.get('/eventsregister', (req, res) => res.render('events'));
 
 // Dashboard
 router.get('/dashboard', ensureAuthenticated, (req, res) =>
