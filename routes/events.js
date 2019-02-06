@@ -33,12 +33,13 @@ router.post('/evregister', (req, res) => {
                 res.redirect("eventsregister")
               })
       });
-  
 
-      router.get('/dashboard',function(req,res){
-       Events.find({},function(err,events){
-         if(err) throw err;
-         res.render('dashboard',{data:events})
+
+      router.get('/dashboardbuzz',function(req,res){
+       Events.find({},function(err,event){
+         if(err) throw err
+         res.render('dashboard',{events:event})
+         var data = JSON.stringify(event);
          console.log(data);
        })
       })
