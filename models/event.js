@@ -34,7 +34,7 @@ const EventsSchema = new mongoose.Schema({
     required: true
   },
   game: {
-    type: String,
+    type: Array,
     required: true
   },
   experience: {

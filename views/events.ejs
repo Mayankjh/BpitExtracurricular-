@@ -15,11 +15,11 @@
             class="form-control"
             placeholder="Enter Name"
            
-          />
+          required/>
         </div>
         <div class="form-group">
           <label for="gender">Gender:</label>
-          <select class="form-control" id="gender" name="gender">
+          <select class="form-control" id="gender" name="gender" required>
             <option>MALE</option>
             <option>FEMALE</option>
             <option>OTHER</option>
@@ -32,13 +32,13 @@
             id="email"
             name="email"
             class="form-control"
-            placeholder="Enter Email"
+            placeholder="Enter Email" required
             
           />
         </div>
         <div class="form-group">
           <label for="program">Program:</label>
-          <select class="form-control" id="prog" name="prog">
+          <select class="form-control" id="prog" name="prog" required>
             <option>BTECH</option>
             <option>MBA</option>
             <option>BBA</option>
@@ -46,7 +46,7 @@
         </div>
         <div class="form-group">
           <label for="course">Course:</label>
-          <select class="form-control" id="course" name="course">
+          <select class="form-control" id="course" name="course" required>
             <option>CSE</option>
             <option>ECE</option>
             <option>EEE</option>
@@ -56,7 +56,7 @@
         </div>
         <div class="form-group">
           <label for="section">Section:</label>
-          <select class="form-control" id="section" name="section">
+          <select class="form-control" id="section" name="section" required>
             <option>A</option>
             <option>B</option>
             <option>NONE</option>
@@ -64,7 +64,7 @@
         </div>
         <div class="form-group">
           <label for="year">Year:</label>
-          <select class="form-control" id="year" name="year">
+          <select class="form-control" id="year" name="year" required>
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -78,21 +78,59 @@
             id="phone"
             name="phone"
             class="form-control"
-            placeholder="Enter Contact No."/>
+            placeholder="Enter Contact No." required/>
         </div>
-        <div class="form-group">
-          <label for="game">Game Event:</label>
-          <select class="form-control" id="game" name="game">
-            <option>Cricket</option>
-            <option>Basketball</option>
-            <option>Badminton</option>
-            <option>Chess</option>
-            <option>Football</option>
-            <option>Athletics</option>
-            <option>Kabaddi</option>
-            <option>Volleyball</option>
-          </select>
+        <div class="form-group row" id="game">
+          <label for="game">Game Events</label><br>
+       <div class="col-sm-5">
+         <br>
+        <input type="checkbox" name="game" value="CarromBoysingle">Carrom (Boys) Single<br>
+        <input type="checkbox"name="game" value="CarromBoysDouble">Carrom (Boys) Double<br>
+        <input type="checkbox" name="game"  value="ChessBoysingle">Chess (Boys) Single<br>
+        <input type="checkbox"name="game"  value="ShotputBoys">Shotput (Boys)<br>
+        <input type="checkbox"name="game"  value="DiscussThrowBoys">Discuss Throw (Boys)<br>
+        <input type="checkbox"name="game"  value="LongJumpBoys">Long-Jump (Boys)<br>
+        <input type="checkbox"name="game"  value="BadmintonBoysingle">Badminton (Boys) Single<br>
+        <input type="checkbox"name="game"  value="BadmintonBoysDouble">Badminton (Boys) Double<br>
+        <input type="checkbox"name="game"  value="Atheletics100mBoys">Atheletics 100m (Boys)<br>
+        <input type="checkbox"name="game"  value="Atheletics200mBoys">Atheletics 200m (Boys)<br>
+        <input type="checkbox"name="game"  value="TableTennisBoysingle">Table Tennis(Boys) Single<br>
+        <input type="checkbox"name="game"  value="TableTennisBoysDouble">Table Tennis(Boys) Double<br>
+        <input type="checkbox"name="game"  value="ArmWrestlingBoys5565">Arm-Wrestling (Boys)(55-65) Kg.<br>
+        <input type="checkbox"name="game"  value="ArmWrestlingBoys6575">Arm-Wrestling (Boys)(65-75) Kg.<br>
+        <input type="checkbox"name="game"  value="ArmWrestlingBoys75O">Arm-Wrestling (Boys)(75-65) Kg.<br>
+        <input type="checkbox"name="game"  value="FootballBoys">Football (Boys)<br>
+        <input type="checkbox"name="game"  value="BasketballBoys">Basketball (Boys)<br>
+        <input type="checkbox"name="game"  value="volleyballBoys">Volleyball (Boys)<br>
+        <input type="checkbox"name="game"  value="TugOfWarBoys">Tug Of War (Boys)<br>
+        <input type="checkbox"name="game"  value="CricketBoys">Cricket (Boys)<br>
+        <input type="checkbox"name="game"  value="KabaddiBoys">Kabaddi (Boys)<br>
+       </div>
+       <div class="col-sm-5">
+         <br>
+         <input type="checkbox"name="game"  value="CarromGirlsSingle">Carrom (Girls) Single<br>
+         <input type="checkbox"name="game"  value="CarromGirlsDouble">Carrom (Girls) Double<br>
+         <input type="checkbox"name="game"  value="ChessGirlsSingle">Chess (Girls) Single<br>
+         <input type="checkbox"name="game"  value="ShotputGirls">Shotput (Girls)<br>
+         <input type="checkbox"name="game"  value="DiscussThrowGirls">Discuss Throw (Girls)<br>
+         <input type="checkbox"name="game"  value="LongJumpGirls">Long-Jump (Girls)<br>
+         <input type="checkbox"name="game"  value="BadmintonGirlsSingle">Badminton (Girls) Single<br>
+         <input type="checkbox"name="game"  value="BadmintonGirlsDouble">Badminton (Girls) Double<br>
+         <input type="checkbox"name="game"  value="Atheletics100mGirls">Atheletics 100m (Girls)<br>
+         <input type="checkbox"name="game"  value="Atheletics200mGirls">Atheletics 200m (Girls)<br>
+         <input type="checkbox"name="game"  value="TableTennisGirlsSingle">Table Tennis(Girls) Single<br>
+         <input type="checkbox"name="game"  value="TableTennisGirlssDouble">Table Tennis(Girls) Double<br>
+         <input type="checkbox"name="game" value="ArmWrestlingGirls60B">Arm-Wrestling (Girls)(Below 60) Kg.<br>
+         <input type="checkbox"name="game" value="ArmWrestlingGirls6575">Arm-Wrestling (Girls)(Above 60) Kg.<br>
+         <input type="checkbox"name="game" value="ThrowBallGirls">Throw Ball(Girls)<br>
+         <input type="checkbox"name="game"  value="FootballBo">Football (Girls)<br>
+        <input type="checkbox"name="game"  value="BasketballGirls">Basketball (Girls)<br>
+        <input type="checkbox"name="game"  value="volleyballGirls">Volleyball (Girls)<br>
+        <input type="checkbox"name="game"  value="TugOfWarGirls">Tug Of War (Girls)<br>
+       </div>
+      
         </div>
+        
         <div class="form-group">
           <label for="name">Experience (If Any)</label>
           <input
@@ -100,7 +138,7 @@
             id="experience"
             name="experience"
             class="form-control"
-            placeholder="For students with no Experience type NA"
+            placeholder="For students with no Experience type NA" required
            
           />
         </div>

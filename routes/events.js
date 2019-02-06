@@ -35,6 +35,11 @@ router.post('/evregister', (req, res) => {
       });
   
 
-
-
+      router.get('/dashboard',function(req,res){
+       Events.find({},function(err,events){
+         if(err) throw err;
+         res.render('dashboard',{data:events})
+         console.log(data);
+       })
+      })
 module.exports = router;
