@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 // Load User model
 
-const Events = require('../models/Event');
+const Events = require('../models/event');
 
 
 // Register Page
