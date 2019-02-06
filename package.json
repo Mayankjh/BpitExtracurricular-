@@ -1,7 +1,7 @@
 {
-  "name": "Bpit Extracurricular",
+  "name": "bpitextra",
   "version": "1.0.0",
-  "description": " Bpit Extracurricular Website",
+  "description": " bpit",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -25,6 +25,7 @@
     "nodemon": "^1.18.9"
   },
   "engines" :{
-    "node": "10.13.0"
+    "node": "10.13.0",
+    "npm":"6.4.1"
   }
 }
