@@ -11,7 +11,7 @@ const app = express();
 require('./config/passport')(passport);
 
 // DB Config
-const db ="mongodb://bpitextra:bpit123@ds219095.mlab.com:19095/bpitextra/";
+const db = require('./config/keys').mongoURI;
 
 // Connect to MongoDB
 mongoose
