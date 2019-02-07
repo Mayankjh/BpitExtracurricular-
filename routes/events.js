@@ -52,17 +52,18 @@ router.post('/evregister', (req, res) => {
          if(err) throw err
          
          res.render('dashboard',{events:event})
-         console.log(event)
+        //  console.log(event)
          
        })
       })
-     
+      var gamenamearray = ["CarromBoysingle", "CarromBoysDouble", "ChessBoysingle", "ShotputBoys", "DiscussThrowBoys", "LongJumpBoys", "BadmintonBoysingle", "BadmintonBoysDouble", "Atheletics100mBoys", "Atheletics200mBoys", "TableTennisBoysingle", "TableTennisBoysDouble", "ArmWrestlingBoys5565", "ArmWrestlingBoys6575", "ArmWrestlingBoys75O", "FootballBoys", "BasketballBoys", "volleyballBoys", "TugOfWarBoys", "CricketBoys", "KabaddiBoys", "CarromGirlsSingle", "CarromGirlsDouble", "ChessGirlsSingle", "ShotputGirls", "DiscussThrowGirls", "LongJumpGirls", "BadmintonGirlsSingle", "BadmintonGirlsDouble", "Atheletics100mGirls", "Atheletics200mGirls", "TableTennisGirlsSingle", "TableTennisGirlssDouble", "ArmWrestlingGirls60B", "ArmWrestlingGirls6575", "ThrowBallGirls", "FootballBo", "BasketballGirls", "volleyballGirls", "TugOfWarGirls"]
+   
       router.get('/dashboard/gamefilter',ensureAuthenticated,function(req,res){
         
         Events.find({},function(err,game){
           if(err) throw err
           
-          res.render('gamefilter',{events:game})
+          res.render('gamefilter',{events:game, gamenames:gamenamearray})
           
           
         })
@@ -70,14 +71,13 @@ router.post('/evregister', (req, res) => {
 
        
        
-       router.get('/games',ensureAuthenticated,function(req,res){
-         var gamenamearray = ["CarromBoysingle", "CarromBoysDouble", "ChessBoysingle", "ShotputBoys", "DiscussThrowBoys", "LongJumpBoys", "BadmintonBoysingle", "BadmintonBoysDouble", "Atheletics100mBoys", "Atheletics200mBoys", "TableTennisBoysingle", "TableTennisBoysDouble", "ArmWrestlingBoys5565", "ArmWrestlingBoys6575", "ArmWrestlingBoys75O", "FootballBoys", "BasketballBoys", "volleyballBoys", "TugOfWarBoys", "CricketBoys", "KabaddiBoys", "CarromGirlsSingle", "CarromGirlsDouble", "ChessGirlsSingle", "ShotputGirls", "DiscussThrowGirls", "LongJumpGirls", "BadmintonGirlsSingle", "BadmintonGirlsDouble", "Atheletics100mGirls", "Atheletics200mGirls", "TableTennisGirlsSingle", "TableTennisGirlssDouble", "ArmWrestlingGirls60B", "ArmWrestlingGirls6575", "ThrowBallGirls", "FootballBo", "BasketballGirls", "volleyballGirls", "TugOfWarGirls"]
+       router.get('/games',function(req,res){
        
         Events.find({game:{$in:[req.query.gamename]}},function(err,event){
           if(err) throw err
           
           res.render('gamefilter',{events:event, gamenames:gamenamearray})
-          console.log(event)
+          // console.log(event)
           
         })
        })
