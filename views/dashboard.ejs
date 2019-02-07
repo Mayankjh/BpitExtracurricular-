@@ -2,6 +2,66 @@
     <h1 class="mt-4">Dashboard</h1>
 <br> <a href="/dashboardbuzz">Click me hard</a>
 <a href="/users/logout" class="btn btn-secondary">Logout</a>
-<p class="lead mb-3">Welcome <%= events.name %></p>
+<p class="lead mb-3">Welcome</p><%= events[0]["email"] %>
+
+<table>
+    <thead>
+        <tr>
+            <th>sno</th>
+            <th>key</th>
+            <th>values</th>
+        </tr>
+    </thead>
+   <tbody>
+       <% for(var i =0 ; i< events.length;i++){ %>
+
+       
+       <tr>
+        <td rowspan="10"><%=i+1%></td> 
+        <td>name</td>
+        <td><%= events[i]["name"]%></td>
+      </tr>
+      <tr>
+            <td>gender</td>
+            <td><%= events[i]["gender"]%></td>
+      </tr>
+      <tr>
+            <td>email</td>
+            <td><%= events[i]["email"]%></td>
+      </tr>
+      <tr>
+            <td>programme</td>
+            <td><%= events[i]["prog"]%></td>
+      </tr>
+      <tr>
+            <td>course</td>
+            <td><%= events[i]["course"]%></td>
+      </tr>
+      <tr>
+            <td>section</td>
+            <td><%= events[i]["section"]%></td>
+      </tr>
+      <tr>
+            <td>years</td>
+            <td><%= events[i]["year"]%></td>
+      </tr>
+      <tr>
+            <td>mobile no</td>
+            <td><%= events[i]["phone"]%></td>
+      </tr>
+      <tr>
+            <td>games</td>
+            <td><%= events[i]["game"]%></td>
+      </tr>
+      <tr>
+            <td>year of experiences</td>
+            <td><%= events[i]["experience"]%></td>
+      </tr>
+      <% } %>
+   </tbody>
+
+</table>
+
+
 
 </section>

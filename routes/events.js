@@ -38,7 +38,9 @@ router.post('/evregister', (req, res) => {
       router.get('/dashboardbuzz',function(req,res){
        Events.find({},function(err,event){
          if(err) throw err
+         
          res.render('dashboard',{events:event})
+         
          var data = JSON.stringify(event);
          console.log(data);
        })
