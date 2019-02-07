@@ -77,8 +77,14 @@
       var t = document.getElementsByTagName('table')
 
       var n = window.open("");
+      var arr = document.location.search.split("=");
+      var heading = arr[1];
+      
+      n.document.write("-------------------------------------------");
+      n.document.write(heading);
+      n.document.write("-------------------------------------------");
       n.document.write(t[0].outerHTML);
-      n.print()
+      //n.print();
     }
     
 
