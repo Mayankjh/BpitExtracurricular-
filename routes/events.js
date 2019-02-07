@@ -41,11 +41,13 @@ router.post('/evregister', (req, res) => {
          if(err) throw err
          
          res.render('dashboard',{events:event})
-         
+         console.log(event)
          
        })
       })
-      router.get('/dashboard/gamefilter', ensureAuthenticated,function(req,res){
+     
+      router.get('/dashboard/gamefilter',ensureAuthenticated,function(req,res){
+        
         Events.find({},function(err,game){
           if(err) throw err
           
@@ -54,6 +56,17 @@ router.post('/evregister', (req, res) => {
           
         })
        })
+       router.get('/games',function(req,res){
+       
+        Events.find({game:{$in:[req.query.gamename]}},function(err,event){
+          if(err) throw err
+          
+          res.render('gamefilter',{events:event})
+          console.log(event)
+          
+        })
+       })
+   
    
   
 module.exports = router;
