@@ -41,8 +41,7 @@ router.post('/evregister', (req, res) => {
          
          res.render('dashboard',{events:event})
          
-         var data = JSON.stringify(event);
-         console.log(data);
+         
        })
       })
 module.exports = router;
