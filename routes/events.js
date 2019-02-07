@@ -1,3 +1,14 @@
+/* for filling  gamesdata 
+
+var x = document.getElementsByName("game");
+var gamenamearrays = [];
+
+for(var i =0 ;i<x.length ; i++){
+  gamenamearrays.push(x[i].value)
+}
+
+*/
+
 const express = require('express');
 const router = express.Router();
 const { ensureAuthenticated } = require('../config/auth');
@@ -56,12 +67,16 @@ router.post('/evregister', (req, res) => {
           
         })
        })
+
+       
+       
        router.get('/games',ensureAuthenticated,function(req,res){
+         var gamenamearray = ["CarromBoysingle", "CarromBoysDouble", "ChessBoysingle", "ShotputBoys", "DiscussThrowBoys", "LongJumpBoys", "BadmintonBoysingle", "BadmintonBoysDouble", "Atheletics100mBoys", "Atheletics200mBoys", "TableTennisBoysingle", "TableTennisBoysDouble", "ArmWrestlingBoys5565", "ArmWrestlingBoys6575", "ArmWrestlingBoys75O", "FootballBoys", "BasketballBoys", "volleyballBoys", "TugOfWarBoys", "CricketBoys", "KabaddiBoys", "CarromGirlsSingle", "CarromGirlsDouble", "ChessGirlsSingle", "ShotputGirls", "DiscussThrowGirls", "LongJumpGirls", "BadmintonGirlsSingle", "BadmintonGirlsDouble", "Atheletics100mGirls", "Atheletics200mGirls", "TableTennisGirlsSingle", "TableTennisGirlssDouble", "ArmWrestlingGirls60B", "ArmWrestlingGirls6575", "ThrowBallGirls", "FootballBo", "BasketballGirls", "volleyballGirls", "TugOfWarGirls"]
        
         Events.find({game:{$in:[req.query.gamename]}},function(err,event){
           if(err) throw err
           
-          res.render('gamefilter',{events:event})
+          res.render('gamefilter',{events:event, gamenames:gamenamearray})
           console.log(event)
           
         })
