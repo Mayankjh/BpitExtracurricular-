@@ -56,7 +56,7 @@ router.post('/evregister', (req, res) => {
           
         })
        })
-       router.get('/games',function(req,res){
+       router.get('/games',ensureAuthenticated,function(req,res){
        
         Events.find({game:{$in:[req.query.gamename]}},function(err,event){
           if(err) throw err
