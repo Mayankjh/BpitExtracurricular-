@@ -82,6 +82,5 @@ router.post('/evregister', (req, res) => {
         })
        })
    
-   
   
 module.exports = router;

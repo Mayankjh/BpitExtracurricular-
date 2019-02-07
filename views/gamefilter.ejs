@@ -10,7 +10,7 @@
     </div>
     
 
-    <div class="content">
+    <div class="content" id="printableArea">
             <h1 class="heading">Dashboard</h1>
           
 <div class="dropdown">
@@ -22,8 +22,9 @@
        <% } %>
 
   </div>
+  <input type="button" class="btn btn-danger" onclick="printDiv('printableArea')" value="Print Details" />
 </div><br>
-      <table class="table table-striped table-responsive table-bordered table-dark">
+      <table class="table table-striped table-responsive table-bordered table-dark" >
                   <thead>
                     <tr>
                       <th>Sno</th>
