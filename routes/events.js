@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const { ensureAuthenticated } = require('../config/auth');
 // Load User model
 
 const Events = require('../models/event');
@@ -44,4 +45,15 @@ router.post('/evregister', (req, res) => {
          
        })
       })
+      router.get('/dashboard/gamefilter', ensureAuthenticated,function(req,res){
+        Events.find({},function(err,game){
+          if(err) throw err
+          
+          res.render('gamefilter',{events:game})
+          
+          
+        })
+       })
+   
+  
 module.exports = router;
