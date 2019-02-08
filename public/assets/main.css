@@ -8,6 +8,13 @@ body{
     overflow: hidden;
     padding-bottom:50px;
 }
+.tmm:hover{
+ background:#311b92;
+ border-radius: 20px;
+ transition: all .2s ease-in-out;
+ color:white;
+
+}
 *{
     font-family: 'Nunito', sans-serif;
 
