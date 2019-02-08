@@ -60,7 +60,7 @@
       crossorigin="anonymous"
     ></script>
     <script>
-       
+     /*  
       function printDiv(divName) {
          var printContents = document.getElementById(divName).innerHTML;
          var originalContents = document.body.innerHTML;
@@ -71,6 +71,23 @@
     
          document.body.innerHTML = originalContents;
     }
+    */
+    
+    function printDiv(divName) {
+      var t = document.getElementsByTagName('table')
+
+      var n = window.open("");
+      var arr = document.location.search.split("=");
+      var heading = arr[1];
+      
+      n.document.write("-------------------------------------------");
+      n.document.write(heading);
+      n.document.write("-------------------------------------------");
+      n.document.write(t[0].outerHTML);
+      //n.print();
+    }
+    
+
           </script>
   </body>
 </html>

@@ -63,7 +63,7 @@ router.post('/evregister', (req, res) => {
         Events.find({},function(err,game){
           if(err) throw err
           
-          res.render('gamefilter',{events:game, gamenames:gamenamearray})
+          res.render('gamefilter',{events:game, gamenames:gamenamearray,heading:"undefined"})
           
           
         })
@@ -76,7 +76,7 @@ router.post('/evregister', (req, res) => {
         Events.find({game:{$in:[req.query.gamename]}},function(err,event){
           if(err) throw err
           
-          res.render('gamefilter',{events:event, gamenames:gamenamearray})
+          res.render('gamefilter',{events:event, gamenames:gamenamearray,heading:req.query.gamename})
           // console.log(event)
           
         })
