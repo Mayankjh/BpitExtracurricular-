@@ -20,10 +20,10 @@
           
 <div class="dropdown">
   <button id="my-dropdown" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select game</button>
-  <div class="dropdown-menu" aria-labelledby="my-dropdown" style="height:500px;overflow-y: scroll ;">
+  <div class="dropdown-menu" aria-labelledby="my-dropdown" style="height:400px;overflow-y: scroll ;"><br><br>
 
       <% for(var i =0 ; i< gamenames.length;i++){ %>
-         <a class="dropdown-item " href='/games?gamename=<%=gamenames[i]%>'><%=gamenames[i]%></a>
+         <a class="dropdown-item" href='/games?gamename=<%=gamenames[i]%>'><%=gamenames[i]%></a>
        <% } %>
 
   </div>
